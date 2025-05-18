@@ -33,21 +33,23 @@ const AnimatedBackground = () => {
     }
 
     function animate() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      if (ctx && canvas) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      for (let line of lines) {
-        ctx.beginPath();
-        ctx.moveTo(line.x, line.y);
-        ctx.lineTo(line.x + line.length, line.y + line.length);
-        ctx.strokeStyle = "rgb(255, 136, 39)";
-        ctx.lineWidth = 1;
-        ctx.stroke();
+        for (let line of lines) {
+          ctx.beginPath();
+          ctx.moveTo(line.x, line.y);
+          ctx.lineTo(line.x + line.length, line.y + line.length);
+          ctx.strokeStyle = "rgb(255, 136, 39)";
+          ctx.lineWidth = 1;
+          ctx.stroke();
 
-        line.x += line.dx;
-        line.y += line.dy;
+          line.x += line.dx;
+          line.y += line.dy;
 
-        if (line.x > canvas.width || line.x < 0) line.dx *= -1;
-        if (line.y > canvas.height || line.y < 0) line.dy *= -1;
+          if (line.x > canvas.width || line.x < 0) line.dx *= -1;
+          if (line.y > canvas.height || line.y < 0) line.dy *= -1;
+        }
       }
 
       requestAnimationFrame(animate);
