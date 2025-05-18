@@ -58,6 +58,7 @@ const ContactPage = () => {
       toast.success("Message sent successfully!");
       reset();
     } catch (error) {
+      console.error("Error sending message:", error);
       toast.error("Failed to send message. Try again later.");
     }
   };
