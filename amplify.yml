@@ -1,0 +1,23 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm install
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**
+
+  # ✅ Add your environment variables here
+  env:
+    variables:
+      NEXT_PUBLIC_EMAILJS_SERVICE_ID: service_9sd1jv6
+      NEXT_PUBLIC_EMAILJS_TEMPLATE_ID: template_0l7tbq5
+      NEXT_PUBLIC_EMAILJS_PUBLIC_KEY: m1wzwdmcpeMDiqJr0

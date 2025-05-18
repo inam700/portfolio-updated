@@ -3,14 +3,10 @@ import React, { useEffect, useState } from "react";
 import PricingSection from "./Pricing";
 import Services from "./Services";
 
-const titles = [
-  "Inam Ullah",
-  "Software Engineer",
-  "Full-Stack JavaScript Developer",
-];
+const titles = ["Software Engineer", "Full-Stack JavaScript Developer"];
 
 const HomePage = () => {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,7 +19,7 @@ const HomePage = () => {
   return (
     <div className="mt-10">
       <div className="flex flex-col md:flex-row items-baseline gap-2 text-xl md:text-3xl">
-        <p>Hello, I&apos;m</p>
+        <p>Hello, I&apos;m a</p>
         <p
           key={titles[index]}
           className="font-semibold animate-shuttle text-orange"
