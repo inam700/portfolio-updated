@@ -1,0 +1,52 @@
+@keyframes moveStripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+.animate-stripes {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #242424 0,
+    #242424 1px,
+    transparent 2px,
+    transparent 28px
+  );
+  background-color: #141414;
+  background-size: 40px 40px;
+  animation: moveStripes 20s linear infinite;
+  opacity: 1;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  animation: fade 2s ease-in-out;
+}
+
+@keyframes shuttle-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-shuttle {
+  animation: shuttle-down 1s ease-in-out;
+}
