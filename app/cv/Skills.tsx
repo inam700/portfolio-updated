@@ -85,11 +85,13 @@ const Skills = () => {
   const [activeTab, setActiveTab] = useState("frontend");
   return (
     <div>
-      <div className="relative grid grid-cols-3 gap-10 mt-5">
+      <div className="relative grid grid-cols-1 md:grid-cols-3 md:gap-10 mt-5">
         {/* Faded top border */}
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-orange via-orange to-transparent z-10" />
+        <div className="hidden md:block absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-orange via-orange to-transparent z-10" />
+        <div className="md:hidden absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-orange to-transparent z-10" />
+
         <div className="relative">
-          <div className="absolute top-0 right-0 h-full w-[1px] bg-gradient-to-b from-orange via-orange to-transparent z-10 pointer-events-none" />
+          <div className="hidden md:block absolute top-0 right-0 h-full w-[1px] bg-gradient-to-b from-orange via-orange to-transparent z-10 pointer-events-none" />
 
           {Object.keys(skills).map((key) => (
             <div
@@ -104,7 +106,11 @@ const Skills = () => {
               {key.replace(/([A-Z])/g, " $1")}
             </div>
           ))}
+          <div className="md:hidden relative w-full mt-10 pb-5">
+            <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-orange to-transparent z-10" />
+          </div>
         </div>
+
         <div className="col-span-2 mt-4">
           <div className="flex flex-wrap gap-5">
             {skills[activeTab]?.map(
@@ -124,7 +130,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <div className="relative grid grid-cols-2 mt-10 text-porcelain">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 mt-10 text-porcelain">
         {/* <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[1px] h-full bg-gradient-to-b from-orange via-orange to-transparent z-10 pointer-events-none" /> */}
 
         {/* Languages Section */}
@@ -136,7 +142,7 @@ const Skills = () => {
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-orange to-transparent z-10" />
           </div>
 
-          <div className="space-y-6 px-6">
+          <div className="md:space-y-6 md:px-6">
             <div>
               <div className="flex justify-between items-center text-sm mb-1 font-medium">
                 <div className="flex items-center gap-2">
@@ -176,7 +182,7 @@ const Skills = () => {
         </div>
 
         {/* Soft Skills Section */}
-        <div>
+        <div className="mt-10 md:mt-0">
           <p className="text-3xl text-center font-semibold tracking-wide">
             Soft Skills
           </p>
@@ -184,7 +190,7 @@ const Skills = () => {
             <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-orange to-transparent z-10" />
           </div>
 
-          <ul className="space-y-3 px-6 text-sm leading-relaxed">
+          <ul className="md:space-y-3 md:px-6 text-sm leading-relaxed">
             {[
               "Clear communicator",
               "Team player",

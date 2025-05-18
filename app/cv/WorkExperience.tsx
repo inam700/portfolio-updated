@@ -37,7 +37,7 @@ const WorkExperience = () => {
           className="relative mt-10"
         >
           {/* Vertical line */}
-          <div className="absolute left-1/2 top-0 h-full w-[2px] bg-orange -translate-x-1/2 z-0" />
+          <div className="absolute md:left-1/2 top-0 h-full w-[2px] bg-orange z-0 md:-translate-x-1/2" />
 
           <div className="flex flex-col gap-12">
             {experiences.map((experience, index) => {
@@ -55,16 +55,21 @@ const WorkExperience = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={inView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="relative flex items-start"
+                  className="relative flex"
                 >
                   {/* Dot */}
-                  <span className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-orange rounded-full z-10" />
+                  <span className="absolute -left-2 md:left-1/2 md:-translate-x-1/2 w-4 h-4 bg-orange rounded-full z-10" />
 
                   {/* Content */}
                   <div
-                    className={`w-1/2 px-6 ${
-                      isRight ? "ml-auto text-left" : "mr-auto text-right"
-                    }`}
+                    className={`
+                md:w-1/2 px-6 
+                ${
+                  isRight
+                    ? "md:ml-auto md:text-left"
+                    : "md:mr-auto md:text-right"
+                }
+              `}
                   >
                     <p className="text-sm text-orange font-medium">
                       {experience.duration}

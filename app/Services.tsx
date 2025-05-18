@@ -3,7 +3,7 @@ import { ServerCog, ShoppingCart, RefreshCcwDot } from "lucide-react";
 
 const Services = () => {
   return (
-    <div className="grid grid-cols-2 gap-5 my-5">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-5 my-5">
       {[
         {
           tagline: "End-to-end web solutions, built for speed and scale.",

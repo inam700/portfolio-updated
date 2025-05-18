@@ -22,21 +22,19 @@ const HomePage = () => {
 
   return (
     <div className="mt-10">
-      <div className="flex">
-        <div className=" flex items-baseline gap-2 text-3xl">
-          <p>Hello, I&apos;m</p>
-          <p
-            key={titles[index]}
-            className="font-semibold animate-shuttle text-orange"
-          >
-            {titles[index]}
-          </p>
-        </div>
+      <div className="flex flex-col md:flex-row items-baseline gap-2 text-xl md:text-3xl">
+        <p>Hello, I&apos;m</p>
+        <p
+          key={titles[index]}
+          className="font-semibold animate-shuttle text-orange"
+        >
+          {titles[index]}
+        </p>
       </div>
       {/* <p className="text-7xl font-semibold mt-5">
         JavaScript Developer Based in Lahore, Pakistan.
       </p> */}
-      <p className="mt-5">
+      <p className="mt-5 text-justify md:text-left">
         JavaScript developer with 4+ years of experience specializing in
         full-stack development using React.js, Next.js, Node.js, Express.js and
         MongoDB. Proven success in building scalable SaaS platforms, responsive
@@ -44,7 +42,7 @@ const HomePage = () => {
         delivering performance-optimized apps, and integrating real-time
         features.
       </p>
-      <div className="grid grid-cols-3 gap-10 mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-5">
         <div className="flex justify-center items-center gap-3">
           <p className="text-9xl">10</p>
           <p className="text-orange">
