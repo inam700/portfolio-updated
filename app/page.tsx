@@ -40,6 +40,22 @@ const HomePage = () => {
           property="og:image"
           content="https://inamullah.com/og-image.png"
         />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Inam Ullah | Full Stack Developer"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore the portfolio of Inam Ullah, specializing in Next.js, Node.js, and TypeScript."
+        />
+        <meta
+          name="twitter:image"
+          content="https://inamullah.com/og-image.png"
+        />
+
         <meta name="robots" content="index, follow" />
       </Head>
       <div className="mt-10">

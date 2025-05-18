@@ -7,21 +7,21 @@ const experiences = [
     location: "Versatile Synergy, Dubai, UAE",
     duration: "July 2023 – Present",
     description:
-      "Developed several successful video games using Unity 3D, Unreal and Cocos2D. Designed game features, levels and characters.",
+      "Built SEO-friendly Next.js apps with SSR, ISR, and dynamic routing; integrated socket.io for auth and real-time data; implemented responsive UIs with Tailwind CSS; added ChatGPT API for AI-driven interactions; and led feature planning with remote teams.",
   },
   {
     title: "Senior Software Engineer",
     location: "ILI.Digital, Lahore, Pakistan",
     duration: "December 2022 – June 2023",
     description:
-      "Created and designed game levels and characters. Developed game features and functions. Fixed bugs and optimized games.",
+      "Refactored enterprise codebases to TypeScript for better performance, built scalable ExpressJS APIs with MongoDB, implemented secure auth with RBAC and SSO, delivered custom UIs using Ant Design and Chakra UI, and led a dev team with code reviews and release management.",
   },
   {
     title: "Software Engineer",
     location: "ILI.Digital, Lahore, Pakistan",
     duration: "November 2020 – December 2022",
     description:
-      "Created and designed game levels and characters. Developed game features and functions. Fixed bugs and optimized games.",
+      "Built custom dashboards and marketing sites from scratch, converting Figma/Adobe XD designs into responsive apps. Managed state with Redux, React Query, and Context API, handled forms using React Hook Form and Formik, and ensured UI consistency with SCSS, Tailwind, and Bootstrap.",
   },
 ];
 
@@ -88,20 +88,6 @@ const WorkExperience = () => {
           </div>
         </motion.div>
       </AnimatePresence>
-
-      {/* Dot Pagination */}
-      {/* <div className="flex gap-1 justify-center">
-        {Array.from({ length: totalPages }).map((_, i) => (
-          <GoDotFill
-            key={i}
-            size={20}
-            onClick={() => setPage(i)}
-            className={`cursor-pointer transition-colors ${
-              page === i ? "text-orange" : "text-porcelain"
-            }`}
-          />
-        ))}
-      </div> */}
     </div>
   );
 };

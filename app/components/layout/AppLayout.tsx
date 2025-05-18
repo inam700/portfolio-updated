@@ -22,7 +22,7 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
         <div className="container mx-auto max-w-[1600px] px-4">
           <div className="md:px-20 py-5 md:py-10 min-h-screen">
             <Header />
-            <div className="flex flex-col md:flex-row md:gap-10 mt-10 text-porcelain">
+            <div className="flex flex-col md:flex-row md:gap-10 mt-10 text-porcelain md:h-[73vh]">
               {shouldShowSidebar && (
                 <div className="w-full md:hidden">
                   <Sidebar />
@@ -30,11 +30,11 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
               )}
 
               {!isMobile && (
-                <div className="hidden md:block w-full md:w-[30%]">
+                <div className="hidden md:block w-full md:w-[30%] h-full">
                   <Sidebar />
                 </div>
               )}
-              <main className="my-10 md:my-0 w-full md:w-[70%] md:h-[73vh] px-10 md:overflow-y-auto bg-darkGray/80 md:rounded-2xl transition-transform duration-300 ease-in-out hover:scale-[1.01] scrollbar-thin scrollbar-thumb-[#ff8827] scrollbar-track-transparent">
+              <main className="my-10 md:my-0 w-full md:w-[70%] h-full px-10 md:overflow-y-auto bg-darkGray/80 md:rounded-2xl transition-transform duration-300 ease-in-out hover:scale-[1.01] scrollbar-thin scrollbar-thumb-[#ff8827] scrollbar-track-transparent">
                 {children}
               </main>
             </div>
