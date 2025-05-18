@@ -7,8 +7,9 @@ const ProfileImage = () => (
       src="/profile-1.png"
       width={180}
       height={180}
-      alt="profile"
+      alt="Inam Ullah | Senior Software Engineer | Full Stack Developer"
       className="ms-1"
+      priority
     />
   </div>
 );

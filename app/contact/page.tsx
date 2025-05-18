@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight, Mail, Phone } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { send } from "@emailjs/browser";
@@ -43,6 +43,8 @@ const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
 const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!;
 
 const ContactPage = () => {
+  const [loading, setLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -53,6 +55,8 @@ const ContactPage = () => {
   });
 
   const onSubmit = async (data: any) => {
+    setLoading(true);
+
     try {
       await send(SERVICE_ID, TEMPLATE_ID, data, PUBLIC_KEY);
       toast.success("Message sent successfully!");
@@ -60,6 +64,8 @@ const ContactPage = () => {
     } catch (error) {
       console.error("Error sending message:", error);
       toast.error("Failed to send message. Try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -176,10 +182,15 @@ const ContactPage = () => {
               <div className="relative z-20 flex justify-end w-full mt-5">
                 <Button
                   type="submit"
-                  className="rounded-none flex items-center justify-center gap-1 text-sm font-semibold py-2 min-w-36 bg-orange text-darkGray hover:bg-orangeHover transition-colors duration-300"
+                  disabled={loading}
+                  className={`text-darkGray rounded-none flex items-center justify-center gap-1 text-sm font-semibold py-2 min-w-36 transition-colors duration-300 ${
+                    loading
+                      ? "bg-orange/70 cursor-not-allowed"
+                      : "bg-orange hover:bg-orangeHover"
+                  }`}
                 >
                   <ArrowRight size={16} />
-                  Send
+                  {loading ? "Sending" : "Send"}
                 </Button>
               </div>
             </form>
