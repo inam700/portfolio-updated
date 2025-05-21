@@ -135,12 +135,14 @@ const Skills = () => {
 
           <ul className="md:space-y-3 md:px-6 text-sm leading-relaxed">
             {[
-              "Clear communicator",
+              "Clear & timely communication",
               "Team player",
-              "Quick problem-solver",
+              "Quick problem-solving",
               "Adaptable mindset",
-              "Manages time well",
-              "Thinks critically",
+              "Time management",
+              "Critical thinking",
+              "Creativity",
+              "Leadership",
             ].map((item, index) => (
               <li key={index} className="flex items-start gap-2">
                 <CheckCircle size={14} className="text-orange mt-1" />

@@ -42,24 +42,18 @@ const Homepage = () => {
         delivering performance-optimized apps, and integrating real-time
         features.
       </motion.p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-5 md:mt-10 lg:mt-5">
-        <div className="flex justify-center items-center gap-3">
-          <p className="text-9xl md:text-5xl lg:text-9xl">10</p>
-          <p className="text-orange">
-            Completed <br /> Projects
-          </p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-5 md:mt-10 lg:mt-10">
+        <div className="flex flex-col text-center gap-3">
+          <p className="text-orange text-6xl font-bold">10+</p>
+          <p className="text-porcelain">Completed Projects</p>
         </div>
-        <div className="flex justify-center items-center gap-3">
-          <p className="text-9xl md:text-5xl lg:text-9xl">4</p>
-          <p className="text-orange">
-            Years <br /> of Experience
-          </p>
+        <div className="flex flex-col text-center gap-3">
+          <p className="text-orange text-6xl font-bold">4+</p>
+          <p className="text-porcelain">Years of Experience</p>
         </div>
-        <div className="flex justify-center items-center gap-3">
-          <p className="text-9xl md:text-5xl lg:text-9xl">5</p>
-          <p className="text-orange">
-            Happy <br /> Clients
-          </p>
+        <div className="flex flex-col text-center gap-3">
+          <p className="text-orange text-6xl font-bold">5+</p>
+          <p className="text-porcelain">Happy Clients</p>
         </div>
       </div>
       <div className="relative w-full mt-10 mb-8 pt-1">
