@@ -71,9 +71,9 @@ const ContactPage = () => {
 
   return (
     <div className="my-10">
-      <div className="grid grid-cols-1 md:grid-cols-5 md:gap-5">
+      <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-5">
         <div
-          className="mb-5 md:mb-0 pt-5 pb-10 px-5 text-porcelain col-span-2 border border-darkGray rounded-2xl transition-all duration-300 ease-in-out 
+          className="mb-5 lg:mb-0 pt-5 pb-10 px-5 text-porcelain col-span-2 border border-darkGray rounded-2xl transition-all duration-300 ease-in-out 
               bg-gradient-to-tl from-[#1e1d1d] via-[#2b2b2b] to-[#3a3a3a] 
               hover:bg-gradient-to-tr hover:from-[#242424] hover:via-[#333333] hover:to-[#444444]"
         >

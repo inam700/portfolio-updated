@@ -1,5 +1,12 @@
 "use client";
-import { FileUser, Send, UserRoundPen, Menu } from "lucide-react";
+import {
+  FileUser,
+  Send,
+  UserRoundPen,
+  Menu,
+  LayoutGrid,
+  Handshake,
+} from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
@@ -7,7 +14,8 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { href: "/", label: "About", icon: UserRoundPen },
   { href: "/cv", label: "CV", icon: FileUser },
-  // { href: "/work", label: "Projects", icon: LayoutGrid },
+  { href: "/work", label: "Projects", icon: LayoutGrid },
+  { href: "/hire-me", label: "Hire Me", icon: Handshake },
 ];
 
 const Header = () => {
@@ -15,17 +23,17 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 md:static bg-darkGray/80 md:rounded-2xl px-4 py-3 shadow-md backdrop-blur">
+    <header className="fixed top-0 left-0 w-full z-50 xl:static bg-darkGray/80 xl:rounded-2xl px-4 py-3 shadow-md backdrop-blur">
       <div className="flex justify-between items-center">
         {/* Mobile menu toggle */}
-        <div className="md:hidden">
+        <div className="xl:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             <Menu size={24} className="text-porcelain" />
           </button>
         </div>
 
         {/* Nav Links - Hidden on small screens */}
-        <nav className="hidden md:flex gap-3">
+        <nav className="hidden xl:flex gap-3">
           {navLinks.map(({ href, label, icon: Icon }) => {
             const isActive = pathname === href;
             return (
@@ -57,7 +65,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="flex flex-col mt-3 gap-2 md:hidden">
+        <div className="flex flex-col mt-3 gap-2 xl:hidden">
           {navLinks.map(({ href, label, icon: Icon }) => {
             const isActive = pathname === href;
             return (

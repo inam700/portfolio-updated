@@ -9,9 +9,6 @@ const CVPage = () => {
         <p className="text-3xl">Work Experience</p>
         <WorkExperience />
       </div>
-      {/* <div className="relative w-full mt-5 pb-5">
-        <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-orange to-transparent z-10" />
-      </div> */}
       <div className="my-10">
         <p className="text-3xl">Technical Skills</p>
         <Skills />

@@ -6,7 +6,7 @@ import DownloadCVButton from "./DownloadCVButton";
 
 const Sidebar = () => {
   return (
-    <aside className="h-full mt-10 md:mt-0 bg-darkGray/80 px-10 flex flex-col items-center md:rounded-2xl transition-transform duration-300 ease-in-out hover:scale-[1.01]">
+    <aside className="h-full mt-10 lg:mt-0 bg-darkGray/80 px-10 flex flex-col items-center xl:rounded-2xl transition-transform duration-300 ease-in-out hover:scale-[1.01]">
       <ProfileImage />
       <TypewriterTitle />
       <p className="text-4xl font-bold">Inam Ullah</p>

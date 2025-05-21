@@ -1,0 +1,105 @@
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiMaterialdesign,
+  SiChakraui,
+  SiBootstrap,
+  SiNodedotjs,
+  SiExpress,
+  SiFirebase,
+  SiMongodb,
+  SiGraphql,
+  SiRedux,
+  SiTestinglibrary,
+  SiJest,
+  SiCypress,
+  SiDocker,
+  SiGit,
+  SiPostman,
+  SiBitbucket,
+  SiJira,
+  SiTrello,
+  SiCloudinary,
+  SiOpenai,
+  SiLerna,
+  SiShadcnui,
+  SiSass,
+  SiReactquery,
+} from "react-icons/si";
+
+export const skills: any = {
+  frontend: [
+    { name: "JavaScript", icon: SiJavascript },
+    { name: "TypeScript", icon: SiTypescript },
+    { name: "React.js", icon: SiReact },
+    { name: "Next.js", icon: SiNextdotjs },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
+    { name: "Material UI", icon: SiMaterialdesign },
+    { name: "ShadCN", icon: SiShadcnui },
+    { name: "Chakra UI", icon: SiChakraui },
+    { name: "SCSS", icon: SiSass },
+    { name: "Bootstrap", icon: SiBootstrap },
+  ],
+  backend: [
+    { name: "Node.js", icon: SiNodedotjs },
+    { name: "Express.js", icon: SiExpress },
+    { name: "Firebase (Auth, Firestore, FCM)", icon: SiFirebase },
+    { name: "MongoDB", icon: SiMongodb },
+    { name: "REST APIs", icon: null },
+    { name: "GraphQL", icon: SiGraphql },
+  ],
+  stateManagement: [
+    { name: "Redux", icon: SiRedux },
+    { name: "Redux Toolkit", icon: null },
+    { name: "Zustand", icon: null },
+    { name: "Context API", icon: null },
+    { name: "React Query", icon: SiReactquery },
+  ],
+  testing: [
+    { name: "Jest", icon: SiJest },
+    { name: "React Testing Library", icon: SiTestinglibrary },
+    { name: "Cypress", icon: SiCypress },
+  ],
+  devOps: [
+    { name: "Docker", icon: SiDocker },
+    { name: "Git", icon: SiGit },
+    { name: "Postman", icon: SiPostman },
+    { name: "Bitbucket", icon: SiBitbucket },
+    { name: "Jira", icon: SiJira },
+    { name: "Trello", icon: SiTrello },
+  ],
+  others: [
+    { name: "Role-Based Access Control (RBAC)", icon: null },
+    { name: "SSO", icon: null },
+    { name: "Cloudinary", icon: SiCloudinary },
+    { name: "ChatGPT Integration", icon: SiOpenai },
+    { name: "Monorepo Architecture", icon: SiLerna },
+  ],
+};
+
+export const experiences = [
+  {
+    title: "Senior Software Engineer",
+    location: "Versatile Synergy, Dubai, UAE",
+    duration: "July 2023 – Present",
+    description:
+      "Built SEO-friendly Next.js apps with SSR, ISR, and dynamic routing; integrated socket.io for auth and real-time data; implemented responsive UIs with Tailwind CSS; added ChatGPT API for AI-driven interactions; and led feature planning with remote teams.",
+  },
+  {
+    title: "Senior Software Engineer",
+    location: "ILI.Digital, Lahore, Pakistan",
+    duration: "December 2022 – June 2023",
+    description:
+      "Refactored enterprise codebases to TypeScript for better performance, built scalable ExpressJS APIs with MongoDB, implemented secure auth with RBAC and SSO, delivered custom UIs using Ant Design and Chakra UI, and led a dev team with code reviews and release management.",
+  },
+  {
+    title: "Software Engineer",
+    location: "ILI.Digital, Lahore, Pakistan",
+    duration: "November 2020 – December 2022",
+    description:
+      "Built custom dashboards and marketing sites from scratch, converting Figma/Adobe XD designs into responsive apps. Managed state with Redux, React Query, and Context API, handled forms using React Hook Form and Formik, and ensured UI consistency with SCSS, Tailwind, and Bootstrap.",
+  },
+];

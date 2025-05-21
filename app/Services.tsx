@@ -31,17 +31,17 @@ const Services = () => {
         return (
           <div
             key={i}
-            className="min-h-[290px] border border-darkGray p-10 rounded-2xl transition-all duration-300 ease-in-out 
+            className="min-h-[290px] border border-darkGray p-5 lg:p-10 rounded-2xl transition-all duration-300 ease-in-out 
               bg-gradient-to-tl from-[#1e1d1d] via-[#2b2b2b] to-[#3a3a3a] 
               hover:bg-gradient-to-tr hover:from-[#242424] hover:via-[#333333] hover:to-[#444444]"
           >
-            <div className="flex items-center gap-5">
+            <div className="flex flex-row md:flex-col lg:flex-row items-center md:items-start lg:items-center gap-5">
               <div>
                 <Icon size={42} className="text-orange" />
               </div>
               <div>
                 <p className="text-orange text-xs">{item.tagline}</p>
-                <p className="text-xl font-semibold">{item.name}</p>
+                <p className="lg:text-xl font-semibold">{item.name}</p>
               </div>
             </div>
             <div className="relative w-full mt-5">
