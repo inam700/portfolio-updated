@@ -69,7 +69,7 @@ const Homepage = () => {
       </p>
       <PricingSection /> */}
 
-      <p className="mt-5 md:text-lg lg:text-3xl">Want to Work Together?</p>
+      {/* <p className="mt-5 md:text-lg lg:text-3xl">Want to Work Together?</p>
       <p className="text-sm text-porcelain/80 mt-2 mb-5">
         I offer flexible, project-based pricing tailored to your scope,
         timeline, and goals. Whether it's a dashboard, full-stack app, or custom
@@ -80,7 +80,7 @@ const Homepage = () => {
         className="flex items-center justify-center gap-1 text-sm font-semibold py-2 px-8 mb-10 w-fit bg-orange text-darkGray hover:bg-orangeHover transition-colors duration-300 cursor-pointer"
       >
         View Pricing
-      </Link>
+      </Link> */}
     </div>
   );
 };

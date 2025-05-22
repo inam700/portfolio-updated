@@ -15,7 +15,7 @@ const navLinks = [
   { href: "/", label: "About", icon: UserRoundPen },
   { href: "/cv", label: "CV", icon: FileUser },
   { href: "/work", label: "Projects", icon: LayoutGrid },
-  { href: "/hire-me", label: "Hire Me", icon: Handshake },
+  // { href: "/hire-me", label: "Hire Me", icon: Handshake },
 ];
 
 const Header = () => {
